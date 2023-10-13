@@ -1,7 +1,7 @@
 class car_park:
     def __init__(self):
         self.spots = {}  # In-memory storage for parking spots
-        self.available_places = {'A': list(range(1, 21)), 'B': list(range(21, 41))}
+        self.available_places = {'A' : [i for i in range(1,21)], 'B' : [j for j in range(21,41)]} 
 
     def assign_spot(self, vehicle_number):
         if not self.available_places['A'] and not self.available_places['B']:
